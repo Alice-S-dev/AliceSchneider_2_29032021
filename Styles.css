@@ -1,0 +1,240 @@
+/* ---------------------------------------- */
+/* ==            SUMMARY              */
+/*---------------------------------------- */
+
+/* L		- 1 - */
+/* L		- 2 - */
+/* L		- 3 - */
+
+/* ---------------------------------------- */
+/* ==       COLOR CODES           */
+/*---------------------------------------- */
+/*
+Black :	#000;
+White : #FFF;
+Blue : #0065FC;
+Light Blue : #DEEBFF;
+Light gray : #F2F2F2;
+*/
+
+
+/* ---------------------------------------- */
+/* == DÉFINITIONS DES POLICES*/
+/*---------------------------------------- */
+@font-face {
+    font-family: 'ralewaythin';
+    src: url('Polices/raleway-variablefont_wght-webfont.woff2') format('woff2'),
+         url('Polices/raleway-variablefont_wght-webfont.woff') format('woff'),
+         url('Polices/Raleway-VariableFont_wght.ttf') format ('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body
+{
+	font-family: ralewaythin, sans-serif
+}
+
+
+/* ---------------------------------------- */
+/* == ÉLÉMENTS PRINCIPAUX */
+/*---------------------------------------- */
+body
+{
+	margin: 0;
+}
+
+main
+{
+	margin: 0 5% 0 5%;
+}
+
+img
+{
+    max-width: 100%;
+}
+/*     Titres     */
+
+h1
+{
+	font-size: 1.5em; 
+}
+
+h2
+{
+	font-size : 1.2em;
+}
+
+
+/*     Texte, listes     */
+
+p
+{
+	font-size: 1em;
+}
+
+li
+{
+	font-size: 1em;	
+	list-style-type: none;
+}
+
+input 
+{
+	font-size: 1.1em;
+}
+
+
+/*     Liens      */
+a
+{
+	text-decoration: none;
+	color: black;
+}
+
+
+/*     Icônes      */
+
+.blue
+{
+	color: #0065FC;
+}
+
+.grey
+{
+	color: #F2F2F2;
+}
+
+
+/* ---------------------------------------- */
+/* ==            HEADER                */
+/*---------------------------------------- */
+#logo-inscription
+{
+	display : flex; 
+	justify-content: space-between; 
+	margin: 20px 5% 20px 5%;
+}
+
+#inscrire
+{
+	color: #0065FC;
+	font-weight: bold;
+}
+
+/*     Navigation      */
+header ul
+{
+	display: flex;
+	justify-content: space-around;
+	padding: 0;
+}
+
+header li
+{
+	width: 50%;
+	text-align: center;
+	border-bottom : 2px lightgrey solid;
+}
+
+header li:hover
+{
+	border-bottom: 2px blue solid ;
+}
+header a:hover
+{
+
+	color : #0065FC;
+}
+
+
+
+/* ---------------------------------------- */
+/* ==  		 SECTION 1 : Recherche  	     */
+/*---------------------------------------- */
+
+/*     Barre de recherche      */
+#Recherche
+{
+	display: inline-flex; 
+	border: 1px #F2F2F2 solid;
+	border-radius: 15px;
+}
+
+input
+{
+	border: none;
+	margin: 0 10px 0 10px;
+}
+
+
+
+button
+{
+	margin:0;
+	padding: 0;
+	border: none;
+	background: none;
+}
+.loupe
+{
+	color: white;
+	font-size: 1.3em;	
+	background-color: #0065FC;	
+	padding : 15px;
+	border-radius: 15px;
+}
+
+.local
+{
+	font-size: 1.1em;
+	background-color: #F2F2F2;
+	padding : 15px 20px 15px 20px; 
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+/*     Filtres de recherche      */
+
+/*     Info      */
+
+/* ---------------------------------------- */
+/* ==     SECTION 2 : Les plus populaires  */
+/*---------------------------------------- */
+
+/*     Cartes hébergements populaires      */
+
+
+/* ---------------------------------------- */
+/* ==       SECTION 3 : Hébergements        */
+/*---------------------------------------- */
+
+/*     Cartes hébergements à Marseille      */
+
+
+
+/* ---------------------------------------- */
+/* ==       SECTION 4 : Activités          */
+/*---------------------------------------- */
+
+/*    Cartes activités    */
+
+
+
+/* ---------------------------------------- */
+/* ==            FOOTER                 */
+/*---------------------------------------- */
+footer
+{
+	margin: 20px 5% 20px 5%;
+}
+/*     Navigation    */
+
+
+/* ---------------------------------------- */
+/* ==       MEDIAS QUERIS        */
+/*---------------------------------------- */
+
+/*     sous partie      */
+
+/*     sous partie      */
