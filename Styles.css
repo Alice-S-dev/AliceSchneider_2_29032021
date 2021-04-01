@@ -72,7 +72,7 @@ li
 
 input 
 {
-	font-size: 1.1em;
+	font-size: 1em;
 }
 
 
@@ -100,6 +100,8 @@ a
 /* ---------------------------------------- */
 /* ==            HEADER                */
 /*---------------------------------------- */
+
+
 #logo-inscription
 {
 	display : flex; 
@@ -114,6 +116,8 @@ a
 }
 
 /*     Navigation      */
+
+
 header ul
 {
 	display: flex;
@@ -138,8 +142,6 @@ header a:hover
 	color : #0065FC;
 }
 
-
-
 /* ---------------------------------------- */
 /* ==  		 SECTION 1 : Recherche  	     */
 /*---------------------------------------- */
@@ -158,44 +160,52 @@ header a:hover
 
 #Recherche
 {
-	display: inline-flex; 
 	border: 1px #F2F2F2 solid;
 	border-radius: 15px;
 	margin-top: 1em;
 }
 
+form
+{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
 
 input
 {
 	border: none;
-	margin: 0 10px 0 10px;
+	width: 50%;
+	margin-left: 10px;
 }
 
+
+button:before 
+{
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f002";
+}
 
 
 button
 {
-	margin:0;
-	padding: 0;
 	border: none;
-	background: none;
-}
-.loupe
-{
+	background-color: #0065FC;
 	color: white;
-	font-size: 1.3em;	
-	background-color: #0065FC;	
-	padding : 15px;
-	border-radius: 15px;
+	border-radius: 12px;
+	padding-right: 13px;
+	padding-left: 13px
 }
+
 
 .local
 {
-	font-size: 1.1em;
+	font-size: 1em;
 	background-color: #F2F2F2;
-	padding : 15px 20px 15px 20px; 
-	border-top-left-radius: 15px;
-	border-bottom-left-radius: 15px;
+	padding : 10px 15px 10px 15px; 
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
 }
 
 /*     Filtres de recherche      */
@@ -314,7 +324,7 @@ button
 
 .Texte-pop
 {
-	margin-right: 2em;
+	margin-right: 0.5em;
 }
 .fa-star
 {
@@ -324,7 +334,6 @@ button
 .Photos-pop
 {
 	max-width: 40%;
-	height: 93%;
 	margin: 0.3em 0.9em 0.3em 0.3em;
 }
 
@@ -454,9 +463,140 @@ footer
 }
 
 /* ---------------------------------------- */
-/* ==       MEDIAS QUERIS        */
+/* ==       MEDIAS QUERIES        */
 /*---------------------------------------- */
 
-/*     sous partie      */
+/*     TABLETTE      */
 
-/*     sous partie      */
+@media screen and (min-width: 768px) 	/* min-width= taille iPad  */
+{
+
+	/*	Barre de recherche	*/
+
+	#Recherche
+	{
+		width: 60%;
+	}
+
+	button:before 
+	{
+    	content: "Rechercher";
+    	font-size: 1em;
+    	font-family: raleway;
+	} 
+
+	button
+	{
+		border-radius: 0px 12px 12px 0;
+	}
+
+	/* Héberg populaires */
+
+	#Populaires
+	{
+		padding-bottom: 40px;
+	}
+
+	#Cartes-populaires
+	{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.Cartes-pop
+	{
+		margin: 0.7em 0.2em;
+	}
+
+	.Cartes-pop h2
+	{
+		font-size: 0.9em;
+	}
+
+	.Cartes-pop p
+	{
+		font-size: 0.7em;
+	}
+
+	#carte-pop-2
+	{
+		min-width: 245px;
+	}
+
+
+	/* Hébergements */
+
+	.Cartes-heberg
+	{
+		margin: 0.7em 0.2em;
+		min-width: 210px;
+		max-width: 275px;
+	}
+
+	#Cartes1-2-3, #Cartes4-5-6
+	{
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+	/* Activités */
+
+	.les3cartes
+	{
+		display: flex;
+	}
+
+	.Cartes-activites
+	{
+		margin: 0 0 2em 0;
+	}
+
+	#vieux-port, #Calanques
+	{
+		margin: 0 2em 2em 0;
+		height: 92%;
+	}
+
+	#vieux-port .Photos-act, #Calanques .Photos-act
+	{
+		height: 85%;
+	}
+	
+	#Cartes-act-2-3, #Cartes-act-5-6
+	{
+		height: 90%;
+	}
+
+
+	/* Footer */
+	
+	footer
+	{
+		padding: 0;
+	}
+	
+	footer nav
+	{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	ul
+	{
+		padding: 0;
+		margin: 5%;
+	}
+} 
+
+
+/*    DESKTOP     */
+
+@media screen and (min-width: 1025px) /* min-width = taille juste au dessus de l'iPad Pro (iPad Pro = 1024px)*/
+{
+	h1
+	{
+		color: green;
+	}
+
+}  
