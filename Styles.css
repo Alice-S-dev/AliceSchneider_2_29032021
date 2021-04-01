@@ -158,25 +158,23 @@ header a:hover
 
 /*     Barre de recherche      */
 
-#Recherche
-{
-	border: 1px #F2F2F2 solid;
-	border-radius: 15px;
-	margin-top: 1em;
-}
-
 form
 {
 	display: flex;
 	width: 100%;
+	height: 40px;
 	justify-content: space-between;
+	border: 1px #F2F2F2 solid;
+	border-radius: 12px;
+	margin-top: 2em;
 }
 
 input
 {
+	display: block;
+	width: 100%;
 	border: none;
-	width: 50%;
-	margin-left: 10px;
+	padding-left: 10px;
 }
 
 
@@ -187,6 +185,10 @@ button:before
 	content: "\f002";
 }
 
+#bouton
+{
+	width: 50px;
+}
 
 button
 {
@@ -194,19 +196,21 @@ button
 	background-color: #0065FC;
 	color: white;
 	border-radius: 12px;
-	padding-right: 13px;
-	padding-left: 13px
+	height: 100%;
+	width: 100%;
 }
 
-
-.local
+#marqueur
 {
-	font-size: 1em;
+	width: 50px;
 	background-color: #F2F2F2;
-	padding : 10px 15px 10px 15px; 
 	border-top-left-radius: 12px;
 	border-bottom-left-radius: 12px;
-}
+	text-align: center;
+	line-height: 40px;
+}	
+
+
 
 /*     Filtres de recherche      */
 
@@ -224,10 +228,20 @@ button
 .Filtre
 {
 	display: flex;
-	align-items: baseline;
 	border: 2px #F2F2F2 solid;
 	border-radius: 30px;
 	margin: 0.3em;
+	line-height: 25px;
+}
+
+.icones-filtres
+{
+	height:100%;
+	width: 40px;
+	background-color: #DEEBFF;
+	border-radius: 25px;
+	text-align: center;
+	line-height: 40px;
 }
 
 .Filtre:hover
@@ -236,6 +250,8 @@ button
  background-color: #F2F2F2;
 }
 
+
+/*
 .Filtre .blue
 {
 	background-color: #DEEBFF;
@@ -256,7 +272,7 @@ button
 {
 	padding: 0.8em;
 }
-
+*/
 
 .Filtre p
 {
@@ -311,21 +327,26 @@ button
 	margin: 0.7em 0;
 }
 
+
+
 .Cartes-pop h2
 {
 	font-size: 1em;
-	margin-bottom: 0.3em;
 }
 
-.Cartes-pop p
+.etoiles
 {
-	margin: 0 0 35px 0;
+	display: flex;
 }
 
 .Texte-pop
 {
 	margin-right: 0.5em;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 .fa-star
 {
 	font-size: 0.8em;
@@ -362,7 +383,7 @@ button
 	border-radius: 20px;
 	box-shadow: 5px 5px 10px #F2F2F2;
 	margin: 0.7em 0;
-	height: 170px;
+	height: 220px;
 	padding: 0.3em 0.3em 0 0.3em;
 }
 
@@ -388,7 +409,13 @@ button
 
 .Cartes-heberg p
 {
-	margin: 0.2em 0 0.2em 1em;
+	margin-left: 1em;
+}
+
+.etoiles-h
+{
+	display: flex;
+	margin: 0;
 }
 
 #plus
@@ -473,7 +500,7 @@ footer
 
 	/*	Barre de recherche	*/
 
-	#Recherche
+	form
 	{
 		width: 60%;
 	}
@@ -562,7 +589,7 @@ footer
 	{
 		height: 85%;
 	}
-	
+
 	#Cartes-act-2-3, #Cartes-act-5-6
 	{
 		height: 90%;
