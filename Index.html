@@ -15,20 +15,34 @@
 <body>
 
 	<header>
-		<div id="logo-inscription">
-			<img src="images/logo/Reservia.svg" alt="Reservia"/>
-		
-			<p> 
-				<a href="#S'inscrire" id="inscrire"> S'inscrire </a>
-			</p>	
-		</div>
+		<span id="header-tel-tab"> 	<!-- Header pour smartphone et tablettes -->
+			<div id="logo-inscription">
+				<img src="images/logo/Reservia.svg" alt="Reservia"/>
+				
+				<p> 
+					<a href="#S'inscrire" id="inscrire"> S'inscrire </a>
+				</p>	
+			</div>
 
-		<nav>		
-			<ul>
-				<li> <a href="#ancre_heberg"> Hébergements </a></li>
-				<li> <a href="#ancre_act"> Activités </a></li>
-			</ul>	
-		</nav>
+			<nav>		
+				<ul>
+					<li> <a href="#ancre_heberg"> Hébergements </a></li>
+					<li> <a href="#ancre_act"> Activités </a></li>
+				</ul>	
+			</nav>
+		</span>
+
+		<div id="header-desktop"> 	<!-- Header pour la version desktop -->
+			<img src="images/logo/Reservia.svg" alt="Reservia"/>
+
+			<nav>		
+				<ul>
+					<li> <a href="#ancre_heberg"> Hébergements </a></li>
+					<li> <a href="#ancre_act"> Activités </a></li>
+					<li> <a href="#S'inscrire" id="inscrire2"> S'inscrire </a></li>
+				</ul>	
+			</nav>
+		</div>
 	
 	</header>
 
@@ -397,7 +411,7 @@
 
 					<div id="Cartes-act-2-3">
 						<a href="#"> <!-- Carte activité 2 -->
-							<div class="Cartes-activites">	
+							<div class="Cartes-activites" id="pomègues">	
 								<div class="Photos-act">
 									<img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues"/>
 								</div>
@@ -410,7 +424,7 @@
 
 
 						<a href="#"> <!-- Carte activité 3 -->
-							<div class="Cartes-activites">		
+							<div class="Cartes-activites" id="frioul">		
 								<div class="Photos-act">
 									<img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Îles de Frioul"/>
 								</div>
@@ -426,7 +440,7 @@
 
 				<div class="les3cartes"> 	<!--Les 3 dèrnières cartes activités-->
 					<a href="#"> <!-- Carte activité 4 -->
-						<div class="Cartes-activites" id="Calanques">		
+						<div class="Cartes-activites" id="calanques">		
 							<div class="Photos-act">
 								<img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques"/>
 							</div>
@@ -440,7 +454,7 @@
 
 					<div id="Cartes-act-5-6">
 						<a href="#"> <!-- Carte activité 5 -->
-							<div class="Cartes-activites">		
+							<div class="Cartes-activites" id="notre-dame">		
 								<div class="Photos-act">
 									<img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde"/>
 								</div>
@@ -453,7 +467,7 @@
 
 
 						<a href="#"> <!-- Carte activité 6 -->
-							<div class="Cartes-activites">		
+							<div class="Cartes-activites" id="longchamp">		
 								<div class="Photos-act">
 									<img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp"/>
 								</div>

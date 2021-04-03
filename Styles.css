@@ -100,7 +100,10 @@ a
 /* ---------------------------------------- */
 /* ==            HEADER                */
 /*---------------------------------------- */
-
+#header-desktop
+{
+	display: none;
+}
 
 #logo-inscription
 {
@@ -136,6 +139,7 @@ header li:hover
 {
 	border-bottom: 2px blue solid ;
 }
+
 header a:hover
 {
 
@@ -202,7 +206,7 @@ button
 
 #marqueur
 {
-	width: 50px;
+	min-width: 40px;
 	background-color: #F2F2F2;
 	border-top-left-radius: 12px;
 	border-bottom-left-radius: 12px;
@@ -321,17 +325,22 @@ button
 {
 	background: #FFF;
 	border-radius: 20px;
-	box-shadow: 5px 5px 10px #F2F2F2;
+	box-shadow: 5px 5px 10px lightgrey;
 	display: flex;
 	height: 140px;
 	margin: 0.7em 0;
 }
 
 
-
 .Cartes-pop h2
 {
 	font-size: 1em;
+}
+
+.Cartes-pop p
+{
+	margin-top: 0.5em;
+	margin-bottom: 1em;
 }
 
 .etoiles
@@ -410,6 +419,13 @@ button
 .Cartes-heberg p
 {
 	margin-left: 1em;
+	margin-top: 0.5em;
+	margin-bottom: 0;
+}
+
+p.etoiles-h
+{
+	margin-top: 1em;
 }
 
 .etoiles-h
@@ -512,10 +528,16 @@ footer
     	font-family: raleway;
 	} 
 
+	#bouton
+	{
+		width: 150px;
+	}
+
 	button
 	{
 		border-radius: 0px 12px 12px 0;
 	}
+
 
 	/* Héberg populaires */
 
@@ -569,32 +591,77 @@ footer
 
 	/* Activités */
 
+	.Cartes-activites
+	{
+		margin: 0;
+	}
 	.les3cartes
 	{
 		display: flex;
+		height: 400px;
+		margin-bottom: 2em;
 	}
 
-	.Cartes-activites
+	.les3cartes a
 	{
-		margin: 0 0 2em 0;
+		width: 50%;
 	}
 
-	#vieux-port, #Calanques
+
+	#vieux-port, #calanques
 	{
-		margin: 0 2em 2em 0;
-		height: 92%;
+		margin-right: 1em;
+		height: 100%;
 	}
 
-	#vieux-port .Photos-act, #Calanques .Photos-act
+	#vieux-port .Photos-act, #calanques .Photos-act
 	{
-		height: 85%;
+		height: 87%;
 	}
 
 	#Cartes-act-2-3, #Cartes-act-5-6
 	{
-		height: 90%;
+		margin-left: 1em;
+		width: 50%;
 	}
 
+	#pomègues
+	{
+		height: 55%;
+		margin-bottom: 2em;
+	}
+
+	#pomègues .Photos-act
+	{
+		height: 75%;
+	}
+
+	#frioul
+	{
+		height: 37%;
+	}
+
+	#frioul .Photos-act
+	{
+		height: 65%;
+	}
+
+	#notre-dame
+	{
+		margin-bottom: 2em;
+		height: 46%;
+	}
+
+	#longchamp
+	{
+		height: 46%;
+	}
+
+
+	#notre-dame .Photos-act, #longchamp .Photos-act
+	{
+		height: 73%;
+	}
 
 	/* Footer */
 	
@@ -621,9 +688,165 @@ footer
 
 @media screen and (min-width: 1025px) /* min-width = taille juste au dessus de l'iPad Pro (iPad Pro = 1024px)*/
 {
-	h1
+
+	/*	Header	*/
+
+	#header-tel-tab
 	{
-		color: green;
+		display: none;
 	}
 
-}  
+	#header-desktop
+	{
+		display: flex;
+		justify-content: space-between;
+		margin: 20px 5% 20px 5%;
+	}
+
+
+	/*	Navigation	*/
+
+	header li
+	{
+		border: none;
+		padding: 1em;
+	}
+
+	header li:hover
+	{
+		border-bottom: none;
+		border-top: 2px blue solid;
+	}
+
+	#inscrire2
+	{
+		color: #0065FC;
+		font-weight: bold;
+	}
+
+
+	/*  Barre de recherches  */
+	form
+	{
+		width: 30%;
+	}
+
+
+	/*  Filtres  */
+
+	#Filtres
+	{
+		display: flex;
+		align-items: baseline ;
+		margin-top: 0.5em;
+	}
+
+	.Filtre
+	{
+		margin: 0 0.7em 0 0.7em;
+	}
+
+
+	/* Hébergements et aside */
+
+	#hébergements-et-pop
+	{
+		display: flex;
+		flex-wrap : wrap;
+		margin-bottom: 30px;
+		justify-content: space-between;
+	}
+
+	#Populaires
+	{
+		order: 2;
+		border-radius: 20px;
+		margin-right: 5%;
+		padding: 20px;
+		width: 22%;
+	}
+
+	#Cartes-populaires
+	{
+		flex-direction: column;
+	}
+
+	.Cartes-pop
+	{
+		height: 120px;
+	}
+
+	#Hebergements
+	{
+		background-color: #F2F2F2;
+		flex-wrap: wrap;
+		border-radius: 20px;
+		margin-left: 5%;
+		width: 60%;
+		padding: 20px;
+	}
+
+	.Cartes-heberg
+	{
+		background-color: white;
+		border-radius: 20px;
+		box-shadow: 5px 5px 10px lightgrey;
+		height: 170px;
+		margin: 0.7em;
+		min-width: 0;
+	}
+
+	#Cartes1-2-3 a, #Cartes4-5-6 a
+	{
+		width: 35%;
+	}
+
+	.Cartes-heberg h2
+	{
+		font-size: 0.9em;
+	}
+
+	.Cartes-heberg p
+	{
+		font-size: 0.7em;
+	}
+
+
+	/*  Activités  */
+
+	#les6cartes
+	{
+		display:flex;
+		justify-content: space-between;
+
+	}
+
+	.les3cartes
+	{
+		width: 50%;
+	}
+
+	.Cartes-activites h2
+	{
+		font-size: 0.9em;
+	}
+
+	#Cartes-act-2-3
+	{
+		margin-right: 1em;
+	}
+
+	#calanques
+	{
+		margin-left: 1em;
+	}
+
+
+}
+
+
+
+
+
+
+
