@@ -15,7 +15,7 @@
 <body>
 
 	<header>
-		<span id="header-tel-tab"> 	<!-- Header pour smartphone et tablettes -->
+		<div id="header-tel-tab"> 	<!-- Header pour smartphone et tablettes (disparaît en version desktop) -->
 			<div id="logo-inscription">
 				<img src="images/logo/Reservia.svg" alt="Reservia"/>
 				
@@ -30,9 +30,9 @@
 					<li> <a href="#ancre_act"> Activités </a></li>
 				</ul>	
 			</nav>
-		</span>
+		</div>
 
-		<div id="header-desktop"> 	<!-- Header pour la version desktop -->
+		<div id="header-desktop"> 	<!-- Header pour la version desktop (disparaît en version mobile)-->
 			<img src="images/logo/Reservia.svg" alt="Reservia"/>
 
 			<nav>		
@@ -57,7 +57,7 @@
 				</p>
 				
 
-				<form method="get" action="#">
+				<form method="get" action="#">  <!-- Barre de recherches -->
 					<div id="marqueur">
 						<i class="fas fa-map-marker-alt"></i>
 					</div>					
@@ -121,8 +121,8 @@
 		</section>
 
 
-		<section id="hébergements-et-pop">   <!-- Section 2 : "Les plus populaires et hébergements" -->
-			<aside id="Populaires"> 	<!-- Les plus populaires -->
+		<div id="hebergements-et-pop">   
+			<section id="Populaires"> 	<!-- Section 2 : Hébergements les plus populaires -->
 				<h1> 
 					Les plus populaires 
 					<i class="fas fa-chart-line"></i>
@@ -217,16 +217,18 @@
 						</div>
 					</a>
 				</div>
-			</aside>
+			</section>
 
 
-			<article id="Hebergements">   <!-- "Hébergements" -->
+			<section id="Hebergements">   <!-- Section 3 : Hébergements -->
 				<h1 id="ancre_heberg">
 					Hébergements à Marseille
 				</h1>
 
-				<div id="Cartes-hébergements">
-					<div id="Cartes1-2-3"> 
+				<div id="Cartes-hebergements"> <!-- Toutes les cartes hébergements -->
+
+					<div id="Cartes1-2-3"> <!--Les 3 premières cartes hébergements-->
+
 						<a href="#"> <!-- Carte hébergement 1 -->
 							<div class="Cartes-heberg">		
 								<div class="Photos-heberg">
@@ -303,7 +305,8 @@
 					</div>
 
 
-					<div id="Cartes4-5-6">
+					<div id="Cartes4-5-6"> <!-- Les 3 dernières cartes hébergements -->
+
 						<a href="#"> <!-- Carte hébergement 4 -->
 							<div class="Cartes-heberg">		
 								<div class="Photos-heberg">
@@ -383,9 +386,9 @@
 				<p id="plus">
 					Afficher plus
 				</p>
-			</article>
+			</section>
 
-		</section>
+		</div>
 
 
 		<section id="Activites">   <!-- Section 4 : "Activités" -->
@@ -396,6 +399,7 @@
 			<div id="les6cartes"> 	<!--Toutes les cartes activités-->
 				
 				<div class="les3cartes"> 	<!--Les 3 premières cartes activités-->
+
 					<a href="#"> 	<!-- Carte activité 1 -->
 						<div class="Cartes-activites" id="vieux-port">		
 							<div class="Photos-act">
@@ -411,7 +415,7 @@
 
 					<div id="Cartes-act-2-3">
 						<a href="#"> <!-- Carte activité 2 -->
-							<div class="Cartes-activites" id="pomègues">	
+							<div class="Cartes-activites" id="pomegues">	
 								<div class="Photos-act">
 									<img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues"/>
 								</div>
@@ -439,6 +443,7 @@
 
 
 				<div class="les3cartes"> 	<!--Les 3 dèrnières cartes activités-->
+					
 					<a href="#"> <!-- Carte activité 4 -->
 						<div class="Cartes-activites" id="calanques">		
 							<div class="Photos-act">

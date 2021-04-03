@@ -2,9 +2,15 @@
 /* ==            SUMMARY              */
 /*---------------------------------------- */
 
-/* L		- 1 - */
-/* L		- 2 - */
-/* L		- 3 - */
+/* L109		- HEADER - 		*/
+/* L161		- SECTION 1 - Recherches - */
+/* L296		- SECTION 2 - Les plus populaires - */
+/* L370		- SECTION 3 - Hébergements à Marseille - */
+/* L436		- SECTION 4 - Activités - */
+/* L482		- FOOTER - */
+/* L507		- MEDIAS QUERIES - */
+	/* L511		- Tablette (min-width 768px) - */
+	/* L698		- Desktop (min-width 1025px) - */
 
 /* ---------------------------------------- */
 /* ==       COLOR CODES           */
@@ -32,6 +38,7 @@ body
 /* ---------------------------------------- */
 /* == ÉLÉMENTS PRINCIPAUX */
 /*---------------------------------------- */
+
 body
 {
 	margin: 0;
@@ -77,6 +84,7 @@ input
 
 
 /*     Liens      */
+
 a
 {
 	text-decoration: none;
@@ -100,6 +108,7 @@ a
 /* ---------------------------------------- */
 /* ==            HEADER                */
 /*---------------------------------------- */
+
 #header-desktop
 {
 	display: none;
@@ -118,8 +127,9 @@ a
 	font-weight: bold;
 }
 
-/*     Navigation      */
 
+
+/*     Navigation      */
 
 header ul
 {
@@ -146,9 +156,11 @@ header a:hover
 	color : #0065FC;
 }
 
+
 /* ---------------------------------------- */
 /* ==  		 SECTION 1 : Recherche  	     */
 /*---------------------------------------- */
+
 #Recherches
 {
 	margin: 0 5% 0 5%;
@@ -182,7 +194,7 @@ input
 }
 
 
-button:before 
+button:before 		/*  bouton de validation de la recherche  */
 {
 	font-family: "Font Awesome 5 Free";
 	font-weight: 900;
@@ -204,7 +216,7 @@ button
 	width: 100%;
 }
 
-#marqueur
+#marqueur        /* icône localisation au début de la barre de recherche  */
 {
 	min-width: 40px;
 	background-color: #F2F2F2;
@@ -223,7 +235,7 @@ button
 	margin: 1.5em 1em 0.3em 0 ;
 }
 
-#Filtres-tel
+#Filtres-tel		/*  div utilisée pour mise en place de la version mobile  */
 {
 	display: flex;
 	flex-wrap: wrap;
@@ -238,7 +250,7 @@ button
 	line-height: 25px;
 }
 
-.icones-filtres
+.icones-filtres		/* div ronde autour des icônes pour les filtres */
 {
 	height:100%;
 	width: 40px;
@@ -248,35 +260,11 @@ button
 	line-height: 40px;
 }
 
-.Filtre:hover
+.Filtre:hover		/* Modification des filtres au survol  */
 {
  border: 2px #DEEBFF dotted;
  background-color: #F2F2F2;
 }
-
-
-/*
-.Filtre .blue
-{
-	background-color: #DEEBFF;
-	border-radius: 25px;
-}
-
-.fa-money-bill-wave, .fa-dog
-{
-	padding: 0.8em 0.7em;
-}
-
-.fa-child
-{
-	padding: 0.8em 0.9em;
-}
-
-.fa-heart
-{
-	padding: 0.8em;
-}
-*/
 
 .Filtre p
 {
@@ -303,9 +291,11 @@ button
 	margin: 30px 0 30px 0;
 }
 
+
 /* ---------------------------------------- */
 /* ==     SECTION 2 : Les plus populaires  */
 /*---------------------------------------- */
+
 #Populaires
 {
 	background: #F2F2F2;
@@ -343,9 +333,9 @@ button
 	margin-bottom: 1em;
 }
 
-.etoiles
+.etoiles 
 {
-	display: flex;
+	display: flex;  /* Pour qu'elles soient moins espacées les unes des autres */
 }
 
 .Texte-pop
@@ -361,7 +351,7 @@ button
 	font-size: 0.8em;
 }
 
-.Photos-pop
+.Photos-pop  /* div qui entourent les images des cartes hébergements populaires */ 
 {
 	max-width: 40%;
 	margin: 0.3em 0.9em 0.3em 0.3em;
@@ -379,6 +369,7 @@ button
 /* ---------------------------------------- */
 /* ==       SECTION 3 : Hébergements        */
 /*---------------------------------------- */
+
 #Hebergements
 {
 	padding: 20px 5% 20px 5%;
@@ -396,7 +387,7 @@ button
 	padding: 0.3em 0.3em 0 0.3em;
 }
 
-.Photos-heberg
+.Photos-heberg  /* div qui entourent les images des cartes hébergements */
 {
 	max-width: 100%;
 	height: 60%;
@@ -434,15 +425,17 @@ p.etoiles-h
 	margin: 0;
 }
 
-#plus
+#plus   /* Afficher plus */
 {
 	font-weight: bold;
 	margin: 2em 0 0 0;
 }
 
+
 /* ---------------------------------------- */
 /* ==       SECTION 4 : Activités          */
 /*---------------------------------------- */
+
 #Activites
 {
 	padding: 20px 5% 20px 5%;
@@ -452,6 +445,7 @@ p.etoiles-h
 {
 	margin-top:0;
 }
+
 
 /*    Cartes activités    */
 
@@ -463,7 +457,7 @@ p.etoiles-h
 	height: 170px;
 }
 
-.Photos-act
+.Photos-act  /* div qui entourent les images des cartes activités  */
 {
 	max-width: 100%;
 	height: 70%;
@@ -493,7 +487,9 @@ footer
 	padding: 5px 0 25px 0;
 }
 
+
 /*     Navigation    */
+
 #liens-footer h2
 {
 	margin-top: 2em;
@@ -505,6 +501,8 @@ footer
 	margin-bottom: 1em;
 }
 
+
+
 /* ---------------------------------------- */
 /* ==       MEDIAS QUERIES        */
 /*---------------------------------------- */
@@ -515,6 +513,8 @@ footer
 {
 
 	/*	Barre de recherche	*/
+
+			/*  La loupe disparaît au profit du bouton "Rechercher", la taille de la barre de recherches diminue  */
 
 	form
 	{
@@ -540,6 +540,8 @@ footer
 
 
 	/* Héberg populaires */
+
+			/* Les cartes sont alignées au lieu d'être l'une au dessus de l'autre  */
 
 	#Populaires
 	{
@@ -575,6 +577,8 @@ footer
 
 	/* Hébergements */
 
+			/*  Les cartes sont sur 2 rangées de 3 cartes, au lieu d'être les unes au dessus des autres  */
+
 	.Cartes-heberg
 	{
 		margin: 0.7em 0.2em;
@@ -591,11 +595,14 @@ footer
 
 	/* Activités */
 
+			/* Les cartes ont des tailles différentes, comme la version desktop, et sont réparties en 2 blocs de 3 cartes  */ 
+
 	.Cartes-activites
 	{
 		margin: 0;
 	}
-	.les3cartes
+
+	.les3cartes  /* Pour les 2 blocs de 3 cartes */
 	{
 		display: flex;
 		height: 400px;
@@ -608,63 +615,66 @@ footer
 	}
 
 
-	#vieux-port, #calanques
+	#vieux-port, #calanques  /*  cartes Vieux-port et Calanques  */
 	{
 		margin-right: 1em;
 		height: 100%;
 	}
 
-	#vieux-port .Photos-act, #calanques .Photos-act
+	#vieux-port .Photos-act, #calanques .Photos-act  /* photos Vieux-port et Calanques  */
 	{
 		height: 87%;
 	}
 
-	#Cartes-act-2-3, #Cartes-act-5-6
+	#Cartes-act-2-3, #Cartes-act-5-6  /* cartes Pomègues + Frioul  et cartes Notre-Dame + Longchamp  */
 	{
 		margin-left: 1em;
 		width: 50%;
 	}
 
-	#pomègues
+	#pomegues  /* carte Pomègues  */
 	{
 		height: 55%;
 		margin-bottom: 2em;
 	}
 
-	#pomègues .Photos-act
+	#pomegues .Photos-act  /* photo Pomègues  */
 	{
 		height: 75%;
 	}
 
-	#frioul
+	#frioul  /* carte Frioul  */
 	{
 		height: 37%;
 	}
 
-	#frioul .Photos-act
+	#frioul .Photos-act  /* photo Frioul */
 	{
 		height: 65%;
 	}
 
-	#notre-dame
+	#notre-dame  /* carte Notre-Dame  */
 	{
 		margin-bottom: 2em;
 		height: 46%;
 	}
 
-	#longchamp
+	#longchamp  /* carte Longchamp  */
 	{
 		height: 46%;
 	}
 
 
-	#notre-dame .Photos-act, #longchamp .Photos-act
+	#notre-dame .Photos-act, #longchamp .Photos-act  /* images Notre-Dame et Longchamp  */
 	{
 		height: 73%;
 	}
 
+
 	/* Footer */
 	
+			/* Le footer est organisé en 3 colonnes au lieu de 3 blocs les uns au dessus des autres  */
+
 	footer
 	{
 		padding: 0;
@@ -691,12 +701,12 @@ footer
 
 	/*	Header	*/
 
-	#header-tel-tab
+	#header-tel-tab   
 	{
 		display: none;
 	}
 
-	#header-desktop
+	#header-desktop  /* utilisation des lignes html plus adaptées pour cette mise en page  */
 	{
 		display: flex;
 		justify-content: space-between;
@@ -705,6 +715,8 @@ footer
 
 
 	/*	Navigation	*/
+
+		/* Le menu de navigation monte au même niveau que le lien "s'inscrire" et le logo. Les liens survolés ont maintenant une ligne au dessus et plus de ligne en dessous  */  */
 
 	header li
 	{
@@ -726,6 +738,9 @@ footer
 
 
 	/*  Barre de recherches  */
+
+			/* La barre de recherche est raccourcie  */ 
+
 	form
 	{
 		width: 30%;
@@ -733,6 +748,8 @@ footer
 
 
 	/*  Filtres  */
+
+		/* Le titre "Filtres" est placé à côté des filtres, et plus au dessus  */ 
 
 	#Filtres
 	{
@@ -747,9 +764,11 @@ footer
 	}
 
 
-	/* Hébergements et aside */
+	/* Hébergements et hébergements populaires */
 
-	#hébergements-et-pop
+			/* Les hébergements ont un fond gris et sont positionnés à côtés des plus populaires. Les plus populaires sont à nouveau en colonne.  */
+
+	#hebergements-et-pop  /* Section "Hébergements à Marseille" + Section "Les plus populaires"  */
 	{
 		display: flex;
 		flex-wrap : wrap;
@@ -757,26 +776,26 @@ footer
 		justify-content: space-between;
 	}
 
-	#Populaires
+	#Populaires  /* tout le bloc "les plus populaires" */
 	{
-		order: 2;
+		order: 2;  /* Pour passer le bloc à droite des hébergements  */
 		border-radius: 20px;
 		margin-right: 5%;
 		padding: 20px;
 		width: 22%;
 	}
 
-	#Cartes-populaires
+	#Cartes-populaires  /* toutes les cartes du bloc */
 	{
 		flex-direction: column;
 	}
 
-	.Cartes-pop
+	.Cartes-pop  /* chaque carte populaire  */
 	{
 		height: 120px;
 	}
 
-	#Hebergements
+	#Hebergements  /* tout le bloc "hébergements" */
 	{
 		background-color: #F2F2F2;
 		flex-wrap: wrap;
@@ -786,7 +805,7 @@ footer
 		padding: 20px;
 	}
 
-	.Cartes-heberg
+	.Cartes-heberg  /* chaque carte hébergement  */
 	{
 		background-color: white;
 		border-radius: 20px;
@@ -796,7 +815,7 @@ footer
 		min-width: 0;
 	}
 
-	#Cartes1-2-3 a, #Cartes4-5-6 a
+	#Cartes1-2-3 a, #Cartes4-5-6 a  
 	{
 		width: 35%;
 	}
@@ -840,7 +859,6 @@ footer
 	{
 		margin-left: 1em;
 	}
-
 
 }
 
