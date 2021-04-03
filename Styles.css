@@ -72,7 +72,7 @@ li
 
 input 
 {
-	font-size: 1.1em;
+	font-size: 1em;
 }
 
 
@@ -100,6 +100,11 @@ a
 /* ---------------------------------------- */
 /* ==            HEADER                */
 /*---------------------------------------- */
+#header-desktop
+{
+	display: none;
+}
+
 #logo-inscription
 {
 	display : flex; 
@@ -114,6 +119,8 @@ a
 }
 
 /*     Navigation      */
+
+
 header ul
 {
 	display: flex;
@@ -132,13 +139,12 @@ header li:hover
 {
 	border-bottom: 2px blue solid ;
 }
+
 header a:hover
 {
 
 	color : #0065FC;
 }
-
-
 
 /* ---------------------------------------- */
 /* ==  		 SECTION 1 : Recherche  	     */
@@ -156,47 +162,59 @@ header a:hover
 
 /*     Barre de recherche      */
 
-#Recherche
+form
 {
-	display: inline-flex; 
+	display: flex;
+	width: 100%;
+	height: 40px;
+	justify-content: space-between;
 	border: 1px #F2F2F2 solid;
-	border-radius: 15px;
-	margin-top: 1em;
+	border-radius: 12px;
+	margin-top: 2em;
 }
-
 
 input
 {
+	display: block;
+	width: 100%;
 	border: none;
-	margin: 0 10px 0 10px;
+	padding-left: 10px;
 }
 
 
+button:before 
+{
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f002";
+}
+
+#bouton
+{
+	width: 50px;
+}
 
 button
 {
-	margin:0;
-	padding: 0;
 	border: none;
-	background: none;
-}
-.loupe
-{
+	background-color: #0065FC;
 	color: white;
-	font-size: 1.3em;	
-	background-color: #0065FC;	
-	padding : 15px;
-	border-radius: 15px;
+	border-radius: 12px;
+	height: 100%;
+	width: 100%;
 }
 
-.local
+#marqueur
 {
-	font-size: 1.1em;
+	min-width: 40px;
 	background-color: #F2F2F2;
-	padding : 15px 20px 15px 20px; 
-	border-top-left-radius: 15px;
-	border-bottom-left-radius: 15px;
-}
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+	text-align: center;
+	line-height: 40px;
+}	
+
+
 
 /*     Filtres de recherche      */
 
@@ -214,10 +232,20 @@ button
 .Filtre
 {
 	display: flex;
-	align-items: baseline;
 	border: 2px #F2F2F2 solid;
 	border-radius: 30px;
 	margin: 0.3em;
+	line-height: 25px;
+}
+
+.icones-filtres
+{
+	height:100%;
+	width: 40px;
+	background-color: #DEEBFF;
+	border-radius: 25px;
+	text-align: center;
+	line-height: 40px;
 }
 
 .Filtre:hover
@@ -226,6 +254,8 @@ button
  background-color: #F2F2F2;
 }
 
+
+/*
 .Filtre .blue
 {
 	background-color: #DEEBFF;
@@ -246,7 +276,7 @@ button
 {
 	padding: 0.8em;
 }
-
+*/
 
 .Filtre p
 {
@@ -295,27 +325,37 @@ button
 {
 	background: #FFF;
 	border-radius: 20px;
-	box-shadow: 5px 5px 10px #F2F2F2;
+	box-shadow: 5px 5px 10px lightgrey;
 	display: flex;
 	height: 140px;
 	margin: 0.7em 0;
 }
 
+
 .Cartes-pop h2
 {
 	font-size: 1em;
-	margin-bottom: 0.3em;
 }
 
 .Cartes-pop p
 {
-	margin: 0 0 35px 0;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+}
+
+.etoiles
+{
+	display: flex;
 }
 
 .Texte-pop
 {
-	margin-right: 2em;
+	margin-right: 0.5em;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 .fa-star
 {
 	font-size: 0.8em;
@@ -324,7 +364,6 @@ button
 .Photos-pop
 {
 	max-width: 40%;
-	height: 93%;
 	margin: 0.3em 0.9em 0.3em 0.3em;
 }
 
@@ -353,7 +392,7 @@ button
 	border-radius: 20px;
 	box-shadow: 5px 5px 10px #F2F2F2;
 	margin: 0.7em 0;
-	height: 170px;
+	height: 220px;
 	padding: 0.3em 0.3em 0 0.3em;
 }
 
@@ -379,7 +418,20 @@ button
 
 .Cartes-heberg p
 {
-	margin: 0.2em 0 0.2em 1em;
+	margin-left: 1em;
+	margin-top: 0.5em;
+	margin-bottom: 0;
+}
+
+p.etoiles-h
+{
+	margin-top: 1em;
+}
+
+.etoiles-h
+{
+	display: flex;
+	margin: 0;
 }
 
 #plus
@@ -454,9 +506,347 @@ footer
 }
 
 /* ---------------------------------------- */
-/* ==       MEDIAS QUERIS        */
+/* ==       MEDIAS QUERIES        */
 /*---------------------------------------- */
 
-/*     sous partie      */
+/*     TABLETTE      */
 
-/*     sous partie      */
+@media screen and (min-width: 768px) 	/* min-width= taille iPad  */
+{
+
+	/*	Barre de recherche	*/
+
+	form
+	{
+		width: 60%;
+	}
+
+	button:before 
+	{
+    	content: "Rechercher";
+    	font-size: 1em;
+    	font-family: raleway;
+	} 
+
+	#bouton
+	{
+		width: 150px;
+	}
+
+	button
+	{
+		border-radius: 0px 12px 12px 0;
+	}
+
+
+	/* Héberg populaires */
+
+	#Populaires
+	{
+		padding-bottom: 40px;
+	}
+
+	#Cartes-populaires
+	{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.Cartes-pop
+	{
+		margin: 0.7em 0.2em;
+	}
+
+	.Cartes-pop h2
+	{
+		font-size: 0.9em;
+	}
+
+	.Cartes-pop p
+	{
+		font-size: 0.7em;
+	}
+
+	#carte-pop-2
+	{
+		min-width: 245px;
+	}
+
+
+	/* Hébergements */
+
+	.Cartes-heberg
+	{
+		margin: 0.7em 0.2em;
+		min-width: 210px;
+		max-width: 275px;
+	}
+
+	#Cartes1-2-3, #Cartes4-5-6
+	{
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+	/* Activités */
+
+	.Cartes-activites
+	{
+		margin: 0;
+	}
+	.les3cartes
+	{
+		display: flex;
+		height: 400px;
+		margin-bottom: 2em;
+	}
+
+	.les3cartes a
+	{
+		width: 50%;
+	}
+
+
+	#vieux-port, #calanques
+	{
+		margin-right: 1em;
+		height: 100%;
+	}
+
+	#vieux-port .Photos-act, #calanques .Photos-act
+	{
+		height: 87%;
+	}
+
+	#Cartes-act-2-3, #Cartes-act-5-6
+	{
+		margin-left: 1em;
+		width: 50%;
+	}
+
+	#pomègues
+	{
+		height: 55%;
+		margin-bottom: 2em;
+	}
+
+	#pomègues .Photos-act
+	{
+		height: 75%;
+	}
+
+	#frioul
+	{
+		height: 37%;
+	}
+
+	#frioul .Photos-act
+	{
+		height: 65%;
+	}
+
+	#notre-dame
+	{
+		margin-bottom: 2em;
+		height: 46%;
+	}
+
+	#longchamp
+	{
+		height: 46%;
+	}
+
+
+	#notre-dame .Photos-act, #longchamp .Photos-act
+	{
+		height: 73%;
+	}
+
+	/* Footer */
+	
+	footer
+	{
+		padding: 0;
+	}
+	
+	footer nav
+	{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	ul
+	{
+		padding: 0;
+		margin: 5%;
+	}
+} 
+
+
+/*    DESKTOP     */
+
+@media screen and (min-width: 1025px) /* min-width = taille juste au dessus de l'iPad Pro (iPad Pro = 1024px)*/
+{
+
+	/*	Header	*/
+
+	#header-tel-tab
+	{
+		display: none;
+	}
+
+	#header-desktop
+	{
+		display: flex;
+		justify-content: space-between;
+		margin: 20px 5% 20px 5%;
+	}
+
+
+	/*	Navigation	*/
+
+	header li
+	{
+		border: none;
+		padding: 1em;
+	}
+
+	header li:hover
+	{
+		border-bottom: none;
+		border-top: 2px blue solid;
+	}
+
+	#inscrire2
+	{
+		color: #0065FC;
+		font-weight: bold;
+	}
+
+
+	/*  Barre de recherches  */
+	form
+	{
+		width: 30%;
+	}
+
+
+	/*  Filtres  */
+
+	#Filtres
+	{
+		display: flex;
+		align-items: baseline ;
+		margin-top: 0.5em;
+	}
+
+	.Filtre
+	{
+		margin: 0 0.7em 0 0.7em;
+	}
+
+
+	/* Hébergements et aside */
+
+	#hébergements-et-pop
+	{
+		display: flex;
+		flex-wrap : wrap;
+		margin-bottom: 30px;
+		justify-content: space-between;
+	}
+
+	#Populaires
+	{
+		order: 2;
+		border-radius: 20px;
+		margin-right: 5%;
+		padding: 20px;
+		width: 22%;
+	}
+
+	#Cartes-populaires
+	{
+		flex-direction: column;
+	}
+
+	.Cartes-pop
+	{
+		height: 120px;
+	}
+
+	#Hebergements
+	{
+		background-color: #F2F2F2;
+		flex-wrap: wrap;
+		border-radius: 20px;
+		margin-left: 5%;
+		width: 60%;
+		padding: 20px;
+	}
+
+	.Cartes-heberg
+	{
+		background-color: white;
+		border-radius: 20px;
+		box-shadow: 5px 5px 10px lightgrey;
+		height: 170px;
+		margin: 0.7em;
+		min-width: 0;
+	}
+
+	#Cartes1-2-3 a, #Cartes4-5-6 a
+	{
+		width: 35%;
+	}
+
+	.Cartes-heberg h2
+	{
+		font-size: 0.9em;
+	}
+
+	.Cartes-heberg p
+	{
+		font-size: 0.7em;
+	}
+
+
+	/*  Activités  */
+
+	#les6cartes
+	{
+		display:flex;
+		justify-content: space-between;
+
+	}
+
+	.les3cartes
+	{
+		width: 50%;
+	}
+
+	.Cartes-activites h2
+	{
+		font-size: 0.9em;
+	}
+
+	#Cartes-act-2-3
+	{
+		margin-right: 1em;
+	}
+
+	#calanques
+	{
+		margin-left: 1em;
+	}
+
+
+}
+
+
+
+
+
+
+
