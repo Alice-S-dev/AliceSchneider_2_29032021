@@ -718,6 +718,19 @@ footer
 
 		/* Le menu de navigation monte au même niveau que le lien "s'inscrire" et le logo. Les liens survolés ont maintenant une ligne au dessus et plus de ligne en dessous  */ 
 
+
+	#navigation-inscription
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items : baseline;
+	}
+
+	#navigation-inscription p
+	{
+		font-size: 1em;
+		padding: 1em;
+	}
 	header li
 	{
 		border: none;
