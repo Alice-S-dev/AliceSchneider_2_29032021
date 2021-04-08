@@ -2,15 +2,15 @@
 /* ==            SUMMARY              */
 /*---------------------------------------- */
 
-/* L109		- HEADER - 		*/
-/* L161		- SECTION 1 - Recherches - */
-/* L296		- SECTION 2 - Les plus populaires - */
-/* L370		- SECTION 3 - Hébergements à Marseille - */
-/* L436		- SECTION 4 - Activités - */
-/* L482		- FOOTER - */
-/* L507		- MEDIAS QUERIES - */
-	/* L511		- Tablette (min-width 768px) - */
-	/* L698		- Desktop (min-width 1025px) - */
+/* L108		- HEADER - 		*/
+/* L181		- SECTION 1 - Recherches - */
+/* L316		- SECTION 2 - Les plus populaires - */
+/* L384		- SECTION 3 - Hébergements à Marseille - */
+/* L449		- SECTION 4 - Activités - */
+/* L495		- FOOTER - */
+/* L520		- MEDIAS QUERIES - */
+	/* L524		- Tablette (min-width 768px) - */
+	/* L711		- Desktop (min-width 1025px) - */
 
 /* ---------------------------------------- */
 /* ==       COLOR CODES           */
@@ -109,27 +109,47 @@ a
 /* ==            HEADER                */
 /*---------------------------------------- */
 
-#header-desktop
+header
 {
-	display: none;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 20px;
 }
 
-#logo-inscription
+#logo
 {
-	display : flex; 
-	justify-content: space-between; 
-	margin: 20px 5% 20px 5%;
+	width: 45%;
+	padding-left: 5%;
+}
+
+#logo img
+{
+	width: 95px;
+}
+
+header p
+{
+	width: 45%;
+	text-align: right;
+	padding-right: 5%;
 }
 
 #inscrire
 {
 	color: #0065FC;
 	font-weight: bold;
+	font-size: 1.2em;
 }
 
 
 
 /*     Navigation      */
+
+header nav
+{
+	width: 100% ;
+	margin-top: 10px;
+}
 
 header ul
 {
@@ -143,6 +163,7 @@ header li
 	width: 50%;
 	text-align: center;
 	border-bottom : 2px lightgrey solid;
+	padding-bottom: 10px;
 }
 
 header li:hover
@@ -198,7 +219,7 @@ button:before 		/*  bouton de validation de la recherche  */
 {
 	font-family: "Font Awesome 5 Free";
 	font-weight: 900;
-	content: "\f002";
+	content: "\f002";  /* permet d'intégrer l'icône de la loupe, sera modifié par "rechercher" par la suite"*/
 }
 
 #bouton
@@ -241,7 +262,7 @@ button
 	flex-wrap: wrap;
 }
 
-.Filtre
+.Filtre /* div pour entourer les éléments de chaque filtre */
 {
 	display: flex;
 	border: 2px #F2F2F2 solid;
@@ -321,18 +342,6 @@ button
 	margin: 0.7em 0;
 }
 
-
-.Cartes-pop h2
-{
-	font-size: 1em;
-}
-
-.Cartes-pop p
-{
-	margin-top: 0.5em;
-	margin-bottom: 1em;
-}
-
 .etoiles 
 {
 	display: flex;  /* Pour qu'elles soient moins espacées les unes des autres */
@@ -344,6 +353,12 @@ button
 	display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.Texte-pop h2
+{
+	font-size: 1em;
+	margin-bottom: 0;
 }
 
 .fa-star
@@ -393,7 +408,7 @@ button
 	height: 60%;
 }
 
-.Cartes-heberg img
+.Photos-heberg img
 {
 	border-radius: 15px 15px 0 0;
 	height: 100%;
@@ -419,10 +434,9 @@ p.etoiles-h
 	margin-top: 1em;
 }
 
-.etoiles-h
+.etoiles-h  
 {
-	display: flex;
-	margin: 0;
+	display: flex; /*pour que les étoiles soient proches les unes des autres*/
 }
 
 #plus   /* Afficher plus */
@@ -686,7 +700,7 @@ footer
 		justify-content: space-between;
 	}
 
-	ul
+	#liens-footer ul
 	{
 		padding: 0;
 		margin: 5%;
@@ -701,16 +715,26 @@ footer
 
 	/*	Header	*/
 
-	#header-tel-tab   
-	{
-		display: none;
-	}
-
-	#header-desktop  /* utilisation des lignes html plus adaptées pour cette mise en page  */
+	header  
 	{
 		display: flex;
+		flex-wrap: nowrap;
 		justify-content: space-between;
+		align-items: baseline;
 		margin: 20px 5% 20px 5%;
+	}
+
+	#logo
+	{
+		padding-left: 0;
+		width: 70%;
+	}
+
+	header p  /* lien "s'inscrire" */
+	{
+		order: 1;
+		padding-right: 0;
+		width: auto;
 	}
 
 
@@ -718,19 +742,11 @@ footer
 
 		/* Le menu de navigation monte au même niveau que le lien "s'inscrire" et le logo. Les liens survolés ont maintenant une ligne au dessus et plus de ligne en dessous  */ 
 
-
-	#navigation-inscription
+	header nav
 	{
-		display: flex;
-		justify-content: space-between;
-		align-items : baseline;
+		width: auto;
 	}
 
-	#navigation-inscription p
-	{
-		font-size: 1em;
-		padding: 1em;
-	}
 	header li
 	{
 		border: none;
@@ -741,12 +757,6 @@ footer
 	{
 		border-bottom: none;
 		border-top: 2px blue solid;
-	}
-
-	#inscrire2
-	{
-		color: #0065FC;
-		font-weight: bold;
 	}
 
 
@@ -848,7 +858,7 @@ footer
 
 	#les6cartes
 	{
-		display:flex;
+		display: flex;
 		justify-content: space-between;
 
 	}
