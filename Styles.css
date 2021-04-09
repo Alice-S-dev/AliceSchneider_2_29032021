@@ -730,6 +730,12 @@ footer
 		width: 70%;
 	}
 
+	#logo img
+	{
+		position: relative;
+		top: 10px;
+	}
+
 	header p  /* lien "s'inscrire" */
 	{
 		order: 1;
